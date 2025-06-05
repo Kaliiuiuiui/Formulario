@@ -1,69 +1,113 @@
-    <!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário Mattricula Escolar</title>
+
+    <style>
+        body {
+            background: linear-gradient(90deg, rgba(136, 132, 210, 1) 50%, rgb(34, 34, 130) 50%, rgba(92, 33, 205, 1) 50%);
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid darkolivegreen;
+            padding: 12px;
+            background-color: rgb(232, 240, 248);
+            border: solid 3px black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        div {
+            margin-bottom: 10px;
+        }
+
+    </style>
 </head>
 
 <body>
-    <main>
-        <form action="" method="">
+    <form action="">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
             <div>
-                <legend>Dados Pessoais</legend>
-                <label for="itext">Campo de texto:</label>
-                <input type="text" id="itext" maxlength="18" placeholder="Digite o seu nome completo">
+                <label for="itext">Nome do aluno</label>
+                <input type="text" name="itext" maxlength="20" placeholder="Nome completo">
             </div>
 
             <div>
-                <label for="itext2">Campo somente leitura:</label>
-                <input type="text" id="itext2" readonly value="apenas leitura">
-            </div>
-
-            <div>
-                <label for="inum">Campo númerico</label>
-                <input type="number" id="inum">
-            </div>
-
-            <div>
-                <label for="idate">Campo data:</label>
+                <label for="idate">Data de nascimento</label>
                 <input type="date" id="idate">
             </div>
 
             <div>
-                <label for="ifile">Campo de arquivo:</label>
-                <input type="file" id="ifile">
+                <label for="text2">Nome do responsável financeiro</label>
+                <input type="text" name="text2" maxlength="20" placeholder="Nome completo">
             </div>
 
             <div>
-                <label for="ipass">Campo de senha:</label>
-                <input type="password" id="ipass" required minlength="6" maxlength="10">
-                <input type="checkbox" onclick="mostrarPass()">
-                <label for="">Mostrar senha</label>
+                <label for="email1">E-mail</label>
+                <input type="email" name="email1" maxlength="25" pattern="[a-z0-9._-]+@[a-z0-9.\-]+.[a-z]{2}" placeholder="*****@***.***.**">
             </div>
-            </fieldset>
+
+            <div>
+                <label for="text4">CPF</label>
+                <input type="text" name="text4" maxlength="11" pattern="[0-9]{11}" placeholder="***.***.***-**">
+                <input type="submit" value="Verificar">
+            </div>
+
+            <div>
+                <label for="text5">Contato</label>
+                <input type="text" name="text5" maxlength="9" pattern="[0-9]{9}" placeholder="(**)*****-****">
+                <input type="submit" value="Verificar">
+            </div>
 
             <fieldset>
-                <legend>Campo de Opçôes</legend>
+                <legend>Dados Aluno</legend>
                 <div>
-                    <p>Escolha sim ou não:</p>
-                    <label for=""><input type="radio" name="radio" value="1">Sim</label>
-                    <label for=""><input type="radio" name="radio" value="0">Não</label>
+                    <label for="slct">Selecione a série do aluno</label>
+                    <select name="select" id="slct">
+                        <option value="valor1">1º Ano</option>
+                        <option value="valor2">2º Ano</option>
+                        <option value="valor3">3º Ano</option>
+                        <option value="valor2">4º Ano</option>
+                        <option value="valor3">5º Ano</option>
+                    </select>
                 </div>
 
                 <div>
-                    <p>Escolha todas as frutas que você gosta: </p>
-                    <label for=""><input type="checkbox" id="icheck" value="">Manga</label>
-                    <label for=""><input type="checkbox" id="icheck" value="">Pera</label>
-                    <label for=""><input type="checkbox" id="icheck" value="">Uva</label>
-                    <label for=""><input type="checkbox" id="icheck" value="">Melão</label>
+                    <label for="slct2">Selecione o turno</label>
+                    <select name="select" id="slct2">
+                        <option value="valor1">Manhã</option>
+                        <option value="valor2">Tarde</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>Atividades Extracurriculares: </p>
+                    <label for=""><input type="checkbox" id="icheck" value="">Musicalização</label>
+                    <label for=""><input type="checkbox" id="icheck" value="">Judô</label>
+                    <label for=""><input type="checkbox" id="icheck" value="">Pintura</label>
+                    <label for=""><input type="checkbox" id="icheck" value="">Futebol</label>
+                    <label for=""><input type="checkbox" id="icheck" value="">Ballet</label> <label for=""><input
+                            type="checkbox" id="icheck" value="">Vôlei</label>
                 </div>
 
             </fieldset>
-        </form>
+
+        </fieldset>
+        <br>
+        <div>
+            <input type="submit" value="Limpar">
+        </div>
         
-    </main>
+    </form>
+
 </body>
 
 </html>
